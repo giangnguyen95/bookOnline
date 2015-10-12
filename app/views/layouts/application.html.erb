@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Giang</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   <head>
+   	     <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+   	     <%= stylesheet_link_tag    'application', media: 'all','data-turbolinks-track' => true %>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body style="background-color:lightgrey">
-
-<%= yield %>
-
-
-</body>
+         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+         <%= csrf_meta_tags %>                                   
+   </head>
+   <body>
+   	     <%= yield %>
+   </body>
 </html>
