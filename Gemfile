@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-
+gem 'bcrypt-ruby', '3.0.0'               
+gem 'bootstrap-sass',       '3.2.0.0'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 group :development, :test do
@@ -15,9 +17,10 @@ group :production do
 end
 
 group :test do
-  #gem 'minitest-reporters', '1.0.5'
+  gem 'minitest-reporters'
   gem 'mini_backtrace',     '0.1.3'
   gem 'guard-minitest',     '2.3.1'
+
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
