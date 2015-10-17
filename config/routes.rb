@@ -1,13 +1,13 @@
 Giang::Application.routes.draw do
 
-  get 'users/new' #signup
   #get "static_pages/home"
   get 'static_pages/help'
   get 'static_pages/about'
   get 'static_pages/contact'
   root 'static_pages#home'
-  resources :microposts
+  get 'signup'  => 'users#new' 
   resources :users
+  resources :microposts
   #root 'users#index'
   get "home/index"
   #root "home#index"
