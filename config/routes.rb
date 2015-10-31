@@ -13,6 +13,7 @@ Giang::Application.routes.draw do
 
   resources :users
   resources :microposts
+  resources :account_activations, only: [:edit]
   #root 'users#index'
   get "home/index"
   #root "home#index"
