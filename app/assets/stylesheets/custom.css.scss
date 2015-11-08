@@ -66,11 +66,21 @@ p{
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  font-family: 'Flavors', cursive;
   &:hover{
      color: white;
      text-decoration: nome;
   }
 }
+
+.navbar{
+  background-color: #336699;
+}
+
+li{
+  font-size: 1.2em;
+  color:  #339933;
+  }
 
 /*footer*/
 

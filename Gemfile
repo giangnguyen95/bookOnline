@@ -11,6 +11,10 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'font-awesome-rails'          
 gem 'bootstrap-sass',       '3.2.0.0'
 gem 'carrierwave'       #upload avatar
+gem "cloudinary"
+gem "mini_magick"
+
+gem 'haml'
 #gem 'font-awesome-less' # font awesome less
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'

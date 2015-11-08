@@ -1,5 +1,7 @@
 Giang::Application.routes.draw do
 
+  get "password_resets/new"
+  get "password_resets/edit"
   get "sessions/new"
   #get "static_pages/home"
   get 'static_pages/help'
@@ -14,6 +16,7 @@ Giang::Application.routes.draw do
   resources :users
   resources :microposts
   resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
   #root 'users#index'
   get "home/index"
   #root "home#index"
