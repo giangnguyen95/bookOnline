@@ -1,5 +1,9 @@
 Giang::Application.routes.draw do
 
+  resources :novels
+
+  resources :books
+
   get "password_resets/new"
   get "password_resets/edit"
   get "sessions/new"
@@ -14,7 +18,7 @@ Giang::Application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   resources :users
-  resources :microposts
+  #esources :microposts
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   #root 'users#index'

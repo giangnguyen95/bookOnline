@@ -1,0 +1,52 @@
+<% provide(:title, 'All Books')%>
+<h1>Listing books</h1>
+
+<div class="row"><div class="col-md-6 col-md-offset-3"><center><%= search_form_for @q do |f| %>
+
+  <%= f.label :title_cont %>
+  <%= f.search_field :title_cont, class: 'form-control' %>
+
+  <%= f.submit class: "btn-btn-primary" %>
+<% end %>
+
+<%= will_paginate %></center></div></div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Author</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.description %></td>
+        <td><%= book.author %></td>
+        <td title="Show book "><%= link_to book do %><i class="fa fa-eye"></i>
+            <% end %></td>
+        <td title="Edit book"><%= link_to edit_book_path(book) do %><i class="fa fa-pencil"></i>
+            <% end %></td>
+        <td title="Delete book"><%= link_to book, method: :delete, data: { confirm: 'Are you sure?' } do %><i class="fa fa-trash-o"></i>
+        <% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<center><%= will_paginate %></center>
+<br>
+
+<left>
+<%= link_to new_book_path do %><i class="fa fa-plus-circle fa-4x" style="font-color:#009933"></i>
+<% end %></left>
+
+

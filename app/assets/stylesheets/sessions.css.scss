@@ -8,64 +8,72 @@ $gray-medium-light: #eaeaea;
 
 /*login*/
 
-.wrapper{
-	background: #50a3a2;
-background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #B5FF90;
+	font-weight: 300;
 	
-	&.form-success{
-		.container1{
-			h1{
-				transform: translateY(85px);
-			}
-		}
+	::-webkit-input-placeholder { /* WebKit browsers */
+		font-family: 'Source Sans Pro', sans-serif;
+			color:    #B5FF90;
+		font-weight: 300;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		font-family: 'Source Sans Pro', sans-serif;
+		 color:    #B5FF90;
+		 opacity:  1;
+		font-weight: 300;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+		font-family: 'Source Sans Pro', sans-serif;
+		 color:    #B5FF90;
+		 opacity:  1;
+		font-weight: 300;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+		font-family: 'Source Sans Pro', sans-serif;
+		 color:    #B5FF90;
+		font-weight: 300;
 	}
 }
 
+
 .container1{
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 80px 0;
-	height: 400px;
+	padding: 90px 0;
+	height: 500px;
 	text-align: center;
 	
 	h1{
 		font-size: 40px;
-		transition-duration: 1s;
-		transition-timing-function: ease-in-put;
+		
 		font-weight: 200;
 	}
 }
 
-form{
-	padding: 20px 0;
-	position: relative;
-	z-index: 2;
+
 	
 	.form-control1{
 		display: block;
 		appearance: none;
 		outline: 0;
-		border: 1px solid fade(white, 40%);
-		background-color: fade(white, 20%);
+		
+		background-color: fade(#B5FF90, 100%);
 		width: 250px;
 		
-		border-radius: 3px;
-		padding: 10px 15px;
+		
+		padding: 0px 15px;
 		margin: 0 auto 10px auto;
 		display: block;
 		text-align: center;
 		font-size: 18px;
 		
-		color: white;
+		color: #B5FF90;
 		
 		transition-duration: 0.25s;
 		font-weight: 300;
 		
 		&:hover{
-			background-color: fade(white, 40%);
+			background-color: fade(#B5FF90, 100%);
 		}
 		
 		&:focus{
@@ -76,16 +84,4 @@ form{
 		}
 	}
 
-}
-
-
-@-webkit-keyframes square {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-700px) rotate(600deg); }
-}
-@keyframes square {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-700px) rotate(600deg); }
-}
-	
 

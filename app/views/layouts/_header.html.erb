@@ -29,17 +29,17 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to current_user do %>
-                   <i class="fa fa-user"></i>
+                   <i class="fa fa-user"></i> Profile
                   <% end %>
               </li>
               <li><%= link_to edit_user_path(current_user) do %>
-                   <i class="fa fa-cog"></i>
+                   <i class="fa fa-cog"></i> Settings
                   <% end %>
               </li>
               <li class="divider"></li>
               <li>
                 <%= link_to logout_path, method: "delete" do %>
-                  <i class="fa fa-sign-in fa-2x"></i>
+                  <i class="fa fa-sign-out"></i> Logout
                 <% end %>
               </li>
             </ul>
@@ -50,14 +50,14 @@
               List Books <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Van Hoc", '#' %></li>
-              <li><%= link_to "Tieu Thuyet", '#' %></li>
+              <li><%= link_to "Van Hoc", books_path %></li>
+              <li><%= link_to "Tieu Thuyet", novels_path %></li>
               <li class="divider"></li>
             </ul>
           </li>
 
         <% else %>
-          <li><%= link_to login_path do%>
+          <li title="Login"><%= link_to login_path do%>
                 <i class="fa fa-sign-in"></i>
               <% end %>
           </li>

@@ -17,3 +17,21 @@ User.create!(name:  "Example User",
               activated: true,
               activated_at: Time.zone.now)
 end
+
+50.times do
+  title = Faker::Book.title
+  description = Faker::Lorem.paragraph
+  author = Faker::App.author
+  Book.create!(title: title,
+               description: description,
+               author: author)
+end
+
+100.times do
+  title = Faker::Book.title
+  description = Faker::Lorem.paragraph
+  author =  Faker::App.author
+  Novel.create!(title: title,
+               description: description,
+               author: author)
+end

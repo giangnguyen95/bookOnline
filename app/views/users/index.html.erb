@@ -1,16 +1,16 @@
 <% provide(:title, 'All users') %>
 <h1>All users</h1>
 
-<%= search_form_for @q do |f| %>
+<center><%= search_form_for @q do |f| %>
 
-  <%= f.label :name %>
-  <%= f.search_field :name %>
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
 
   <%= f.submit %>
-<% end %>
+<% end %></center>
 
 
-<%= will_paginate %>
+<center><%= will_paginate %></center>
 
 <table class="table">
   <thead>
@@ -41,5 +41,5 @@
   </tbody>
 </table>
 
-<%= will_paginate %>
+<center><%= will_paginate %></center>
 
